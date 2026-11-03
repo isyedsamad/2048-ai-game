@@ -302,7 +302,6 @@ export default function GamePage() {
               {isCreatingSession ? (
                 <>
                   <Loader2 className="w-3.5 h-3.5 animate-spin" />
-                  <span>Connecting...</span>
                 </>
               ) : (
                 <>
@@ -332,7 +331,7 @@ export default function GamePage() {
 
         <main className="flex-1 px-4 sm:px-6 pt-3.5 sm:pt-5 pb-3 max-w-6xl w-full mx-auto flex flex-col gap-3 sm:gap-4">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-4">
-            <Card className="px-1 py-1 sm:py-0 bg-gradient-to-br from-emerald-500/10 via-transparent to-transparent border-emerald-200 shadow-xs relative overflow-hidden">
+            <Card className="px-2 py-1 sm:py-0 bg-gradient-to-br from-emerald-500/10 via-transparent to-transparent border-emerald-200 shadow-xs relative overflow-hidden">
               <div className="absolute right-0 top-0 h-16 w-16 sm:h-24 sm:w-24 translate-x-6 sm:translate-x-8 -translate-y-6 sm:-translate-y-8 bg-emerald-500/10 rounded-full blur-xl sm:blur-2xl pointer-events-none"></div>
               <CardHeader className="flex flex-row items-center sm:items-start justify-between space-y-0 p-2 sm:p-4 pb-0 z-10">
                 <CardTitle className="text-xs sm:text-sm font-medium text-muted-foreground">Score</CardTitle>
@@ -348,7 +347,7 @@ export default function GamePage() {
               </CardContent>
             </Card>
 
-            <Card className="px-1 py-1 sm:py-0 bg-gradient-to-br from-violet-500/10 via-transparent to-transparent border-violet-200 shadow-xs relative overflow-hidden">
+            <Card className="px-2 py-1 sm:py-0 bg-gradient-to-br from-violet-500/10 via-transparent to-transparent border-violet-200 shadow-xs relative overflow-hidden">
               <div className="absolute right-0 top-0 h-16 w-16 sm:h-24 sm:w-24 translate-x-6 sm:translate-x-8 -translate-y-6 sm:-translate-y-8 bg-violet-500/10 rounded-full blur-xl sm:blur-2xl pointer-events-none"></div>
               <CardHeader className="flex flex-row items-center sm:items-start justify-between space-y-0 p-2 sm:p-4 pb-0 z-10">
                 <CardTitle className="text-xs sm:text-sm font-medium text-muted-foreground">Best Score</CardTitle>
@@ -364,7 +363,7 @@ export default function GamePage() {
               </CardContent>
             </Card>
 
-            <Card className="px-1 py-1 sm:py-0 bg-gradient-to-br from-blue-500/10 via-transparent to-transparent border-blue-200 shadow-xs relative overflow-hidden">
+            <Card className="px-2 py-1 sm:py-0 bg-gradient-to-br from-blue-500/10 via-transparent to-transparent border-blue-200 shadow-xs relative overflow-hidden">
               <div className="absolute right-0 top-0 h-16 w-16 sm:h-24 sm:w-24 translate-x-6 sm:translate-x-8 -translate-y-6 sm:-translate-y-8 bg-blue-500/10 rounded-full blur-xl sm:blur-2xl pointer-events-none"></div>
               <CardHeader className="flex flex-row items-center sm:items-start justify-between space-y-0 p-2 sm:p-4 pb-0 z-10">
                 <CardTitle className="text-xs sm:text-sm font-medium text-muted-foreground">Moves</CardTitle>
@@ -382,7 +381,7 @@ export default function GamePage() {
               </CardContent>
             </Card>
 
-            <Card className="px-1 py-1 sm:py-0 bg-gradient-to-br from-amber-500/10 via-transparent to-transparent border-amber-200 shadow-xs relative overflow-hidden">
+            <Card className="px-2 py-1 sm:py-0 bg-gradient-to-br from-amber-500/10 via-transparent to-transparent border-amber-200 shadow-xs relative overflow-hidden">
               <div className="absolute right-0 top-0 h-16 w-16 sm:h-24 sm:w-24 translate-x-6 sm:translate-x-8 -translate-y-6 sm:-translate-y-8 bg-amber-500/10 rounded-full blur-xl sm:blur-2xl pointer-events-none"></div>
               <CardHeader className="flex flex-row items-center sm:items-start justify-between space-y-0 p-2 sm:p-4 pb-0 z-10">
                 <CardTitle className="text-xs sm:text-sm font-medium text-muted-foreground">Target Tile</CardTitle>
@@ -476,7 +475,7 @@ export default function GamePage() {
                         />
                         <button
                           onClick={handleCopyLink}
-                          className="p-2 bg-[#c76628] text-white rounded-lg hover:bg-[#b05820] transition-colors shadow-xs"
+                          className="p-2 bg-[#c76628] text-white rounded-sm hover:bg-[#b05820] transition-colors shadow-xs"
                           title="Copy link"
                         >
                           {isCopied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
@@ -484,7 +483,7 @@ export default function GamePage() {
                         <Link
                           href={`/ai-center/${gameCode}`}
                           target="_blank"
-                          className="p-2 bg-zinc-100 text-zinc-700 border border-zinc-200 rounded-lg hover:bg-zinc-200 transition-colors"
+                          className="p-2 bg-zinc-100 text-zinc-700 border border-zinc-200 rounded-sm hover:bg-zinc-200 transition-colors"
                           title="Open AI Center"
                         >
                           <ExternalLink className="w-4 h-4" />
